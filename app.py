@@ -30,3 +30,14 @@ expected = nb.predict(X_test)
 predicted =Y_test
 results = confusion_matrix(expected, predicted)
 print(results)
+
+expected = knn.predict(X_test)
+predicted =Y_test
+results = confusion_matrix(expected, predicted)
+print(results)
+from sklearn.metrics import confusion_matrix
+
+expected = rfc.predict(X_test)
+predicted =Y_test
+results = confusion_matrix(expected, predicted)
+print(results)
