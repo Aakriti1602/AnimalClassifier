@@ -20,3 +20,13 @@ knn.fit(X_train, Y_train)
 X_new=np.array([[1,0,1,0,1,0,1,0,1,0,1,0,0,1,1,0]])
 pred = knn.predict(X_new)
 print(pred)
+nb = GaussianNB()
+nb.fit(X_train, Y_train)
+print("training accuracy :", nb.score(X_train, Y_train))
+print("testing accuracy :", nb.score(X_test, Y_test))
+from sklearn.metrics import confusion_matrix
+
+expected = nb.predict(X_test)
+predicted =Y_test
+results = confusion_matrix(expected, predicted)
+print(results)
